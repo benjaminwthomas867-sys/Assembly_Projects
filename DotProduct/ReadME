@@ -1,1 +1,5 @@
 A simple dot product function written in assembly with a testbench in C
+
+Script using my Assembly function: 15.5 seconds
+Script using equivalent C function: 42.830000 seconds
+So roughly 3x faster with Assembly!!

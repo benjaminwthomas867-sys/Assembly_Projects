@@ -1,0 +1,20 @@
+#  You are making a guessing game. The player needs to think of a number between 10 and 100 (inclusive). 10
+#They then divide the number by 3, 5 and 7, and tell you the remainders. Write RISC-V assembly code
+#using the M extension to compute the original number from the three remainders, which you have stored
+#in registers x10, x11 and x12. Store the answer (the number first thought of) in x13. You may assume
+#that 3, 5, and 7 are pairwise coprime to simplify the calculation.
+
+
+addi x5, x0,70
+mul x13, x10, x5
+
+addi x5, x0,21
+mul x6, x11, x5
+add x13, x13, x6
+
+addi x5, x0,15
+mul x6, x12, x5
+add x13, x13, x6
+
+addi x5,x0, 105
+rem x13, x13, x5

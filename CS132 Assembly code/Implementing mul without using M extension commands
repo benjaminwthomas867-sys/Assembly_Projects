@@ -1,0 +1,13 @@
+# mul x1,x2,x3
+
+BGE x2,x0,20
+
+ADDi x2,x2,1
+SUB x1, x1,x3
+BLT x2,x0,-8
+jal x0, 20
+
+ADDi x2,x2,-1
+ADD x1, x1,x3
+ADDi x2,x2,-1
+BGE x2,x0,-8
